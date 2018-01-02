@@ -1,5 +1,10 @@
 import React from 'react';
 import {Navbar , NavbarBrand , FormGroup , FormControl , Col} from 'react-bootstrap';
+import {connect} from 'react-redux';
+import {bindActionCreators} from  'redux';
+
+//importing the actions
+import {getCars} from '../actions'
 class Search extends React.Component{
 
     constructor(props){
@@ -12,7 +17,7 @@ class Search extends React.Component{
 
     onSearchSubmit = (event)=>{
         event.preventDefault();
-        console.log(this.state);
+        this.props.getCars(this.state.search_keyword);
     }
 
      onTextChange = (event)=>{
@@ -45,4 +50,13 @@ class Search extends React.Component{
 
 }
 
-export default Search;
+//function mapStateToProps()
+
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({
+        getCars: getCars
+    } , dispatch);
+}
+
+export default connect(null , mapDispatchToProps)(Search);
