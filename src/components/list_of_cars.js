@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Panel} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 class ListOfCars extends Component{
 
@@ -8,10 +9,13 @@ class ListOfCars extends Component{
         if(car_reducer){
             return car_reducer.map((car)=>{
                 const panel_header = car.brand+" "+car.model;
+                const car_url = "/car/"+car.id;
                 return(
-                <Panel header={panel_header} key = {car.id} bsStyle="success">
-                    {car.description}
-                </Panel>
+                <Link to={car_url}>
+                    <Panel header={panel_header} key = {car.id} bsStyle="success">
+                        {car.description}
+                    </Panel>
+                </Link>
                 )
             })
         }

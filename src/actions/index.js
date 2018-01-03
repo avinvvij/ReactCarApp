@@ -14,3 +14,18 @@ const request = fetch(
         payload: request
     }
 }
+
+
+export function getCarDetails(car_id){
+    const request = fetch(
+    Server_Url+"?id="+car_id,
+    {
+        method:'GET'
+    }
+).then(response => response.json());
+
+    return{
+        type: 'CAR_DETAIL',
+        payload: request
+    }
+}
