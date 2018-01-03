@@ -46,10 +46,13 @@ class Search extends React.Component{
                 </Navbar>
                 <Carousel>
                     <CarouselItem>
-                        <img height = {512} width = {1356} src="https://abm-website-assets.s3.amazonaws.com/mbtmag.com/s3fs-public/styles/hero/public/featured_image/2017/05/McLaren72OS.jpg?itok=z5yzxhkv"/>
+                        <img height = {512} width = {1400} src="https://abm-website-assets.s3.amazonaws.com/mbtmag.com/s3fs-public/styles/hero/public/featured_image/2017/05/McLaren72OS.jpg?itok=z5yzxhkv"/>
                     </CarouselItem>
                     <CarouselItem>
-                        <img height = {512} width = {1356} src="https://abm-website-assets.s3.amazonaws.com/manufacturing.net/s3fs-public/styles/hero/public/featured_image/2017/09/mclaren%20auto%20racing%20large.jpg?itok=oPUJPY8o"/>
+                        <img height = {512} width = {1400} src="https://abm-website-assets.s3.amazonaws.com/manufacturing.net/s3fs-public/styles/hero/public/featured_image/2017/09/mclaren%20auto%20racing%20large.jpg?itok=oPUJPY8o"/>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <img height = {512} width = {1400} src="https://abm-website-assets.s3.amazonaws.com/ecnmag.com/s3fs-public/styles/hero/public/featured_image/2016/09/roadway.jpg?itok=7v2ROvsd"/>
                     </CarouselItem>
                 </Carousel>
             </div>
