@@ -4,6 +4,8 @@ import React,{Component} from 'react';
 
 //components
 import Search from './search'
+import ListOfCars from './list_of_cars';
+
 class App extends Component{
 
     componentWillReceiveProps(nextProps){
@@ -22,6 +24,8 @@ class App extends Component{
         return(
             <div>
                 <Search />
+                <br />
+                <ListOfCars />
             </div>
         );
     }

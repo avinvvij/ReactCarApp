@@ -1,4 +1,4 @@
-const Server_Url = "http://localhost:3304/carsIndex";
+const Server_Url = "http://localhost:3004/carsIndex";
 
 export function getCars(keywords){
 
@@ -7,11 +7,10 @@ const request = fetch(
     {
         method:'GET'
     }
-).then(response => console.log(response));
+).then(response => response.json());
 
     return{
         type: 'SEARCH_CARS',
         payload: request
     }
-    console.log(keywords);
 }

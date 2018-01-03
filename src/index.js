@@ -4,6 +4,7 @@ import {BrowserRouter , Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore , applyMiddleware , compose} from 'redux';
 import ThunkMiddleWare from 'redux-thunk';
+import PromiseMiddleware from 'redux-promise';
 
 //components
 import App from './components/App';
@@ -13,7 +14,7 @@ import Car from './components/Car';
 import reducers from './reducers';
 
 const createAppStore = compose(
-    applyMiddleware(ThunkMiddleWare)
+    applyMiddleware(ThunkMiddleWare , PromiseMiddleware)
 )(createStore);
 
 export function configureStore(initialState){
